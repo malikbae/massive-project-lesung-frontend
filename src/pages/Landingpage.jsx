@@ -7,9 +7,10 @@ import Kisah from "../components/Kisah";
 import Video from "../components/Video";
 
 const Landingpage = () => {
+  const isUserLoggedIn = false;
   return (
     <div>
-      <NavBar />
+      <NavBar is_login={isUserLoggedIn} />
       <Intro />
       <Layanan1 />
       <Layanan2 />

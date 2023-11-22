@@ -22,7 +22,7 @@ function SignIn() {
       name: "Masuk",
       border: "transparent",
       fill: "secondary",
-      path: "",
+      path: "/home",
     },
     {
       id: 2,

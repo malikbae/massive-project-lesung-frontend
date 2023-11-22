@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import HeadingText from "../components/HeadingText";
 import SignUpInfo from "../components/SignUpInfo";
 import PersonalInfo from "../components/PersonalInfo";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function SignUp() {
   const [page, setPage] = useState(0);
+  const navigate = useNavigate();
 
   const pageDisplay = () => {
     if (page === 0) {
@@ -38,7 +39,8 @@ function SignUp() {
                   className="bg-secondary text-heading font-medium text-sm rounded-[50px] p-4 w-full"
                   onClick={() => {
                     if (page === 1) {
-                      alert("Terimakasih Telah Mendaftar");
+                      alert("Terimakasih telah mendaftar. Silahkan login terlebih dahulu");
+                      navigate("/sign-in");
                     } else {
                       setPage((currPage) => currPage + 1);
                     }

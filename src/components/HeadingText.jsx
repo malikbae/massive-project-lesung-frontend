@@ -15,7 +15,9 @@ function HeadingText() {
           </h1>
         </div>
         <div className="mt-8">
-          <p className="text-sm/tight mb-3 font-normal text-background">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in ante augue. Cras in risus vitae magna ullamcorper mollis at sit amet lorem.</p>
+          <p className="text-sm/tight mb-3 font-normal text-background">
+            Dapatkan pengalaman bimbingan belajar atau les privat dengan guru les berkualitas yang sesuai dengan kebutuhan preferensi anda. Kami menyediakan platform yang memudahkan Anda menemukan apa yang anda butuhkan.
+          </p>
         </div>
         <div className="flex flex-wrap items-center justify-between gap-6 mt-8">
           <button className="bg-secondary text-heading text-sm font-semibold rounded-[30px] p-4">LAYANAN KAMI</button>

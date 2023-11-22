@@ -2983,6 +2983,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-icons@npm:^4.12.0":
+  version: 4.12.0
+  resolution: "react-icons@npm:4.12.0"
+  peerDependencies:
+    react: "*"
+  checksum: 2170f43031ee7365539f72d4075cbe6c7fbf9a66d6cf4494aa9393b194272da0564f5b19d1b24dbfc567c0ac89f5fe5b8974d92dd83f61e252388dde6a226fb8
+  languageName: node
+  linkType: hard
+
 "react-is@npm:^16.13.1":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
@@ -3503,6 +3512,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"swiper@npm:^11.0.4":
+  version: 11.0.4
+  resolution: "swiper@npm:11.0.4"
+  checksum: 1d9fd48353ae704d042aa951e5380f9473614bc85cfe216d329d61fe1bcd3585ed29c49a3d1617e7829ad4bfb37cb60dcb65b4181c7f428a2102e88e4ed0d871
+  languageName: node
+  linkType: hard
+
 "tailwind@workspace:.":
   version: 0.0.0-use.local
   resolution: "tailwind@workspace:."
@@ -3519,9 +3535,11 @@ __metadata:
     postcss: "npm:^8.4.31"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
+    react-icons: "npm:^4.12.0"
     react-router-dom: "npm:^6.19.0"
     react-slick: "npm:^0.29.0"
     slick-carousel: "npm:^1.8.1"
+    swiper: "npm:^11.0.4"
     tailwindcss: "npm:^3.3.5"
     vite: "npm:^4.4.5"
   languageName: unknown
