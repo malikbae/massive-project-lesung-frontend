@@ -4,9 +4,10 @@ import Profile from "../components/Profile";
 import RiwayatKelas from "../components/RiwayatKelas";
 
 function ProfileSiswa() {
+  const isUserLoggedIn = true;
   return (
     <>
-      <NavBar />
+      <NavBar is_login={isUserLoggedIn} />
       <Profile />
       <RiwayatKelas />
       <Footer />

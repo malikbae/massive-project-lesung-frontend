@@ -15,6 +15,7 @@ import Guru2 from "../assets/img/guru-2.jpg";
 import Guru3 from "../assets/img/guru-3.jpg";
 import { IoWalletSharp } from "react-icons/io5";
 import { MdOutlineAccessTimeFilled, MdVerified } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 function HomePage() {
   const isUserLoggedIn = true;
@@ -25,36 +26,42 @@ function HomePage() {
       name: "Muhammad Abidin",
       subject: "Guru Agama & SD",
       backgroundImage: Guru1,
+      path: "/detail-guru",
     },
     {
       id: 2,
       name: "Amelia Puspita Sari",
       subject: "Guru Bahasa Indonesia & Inggris",
       backgroundImage: Guru2,
+      path: "",
     },
     {
       id: 3,
       name: "Khoirul Anam",
       subject: "Guru Matematika ",
       backgroundImage: Guru3,
+      path: "",
     },
     {
       id: 4,
       name: "Muhammad Abidin",
       subject: "Guru Agama & SD",
       backgroundImage: Guru1,
+      path: "",
     },
     {
       id: 5,
       name: "Amelia Puspita Sari",
       subject: "Guru Bahasa Indonesia & Inggris",
       backgroundImage: Guru2,
+      path: "",
     },
     {
       id: 6,
       name: "Khoirul Anam",
       subject: "Guru Matematika ",
       backgroundImage: Guru3,
+      path: "",
     },
   ];
 
@@ -175,13 +182,12 @@ function HomePage() {
                   <p className="text-base text-background border-b-2 border-neutral-100 border-opacity-100 pb-4">{item.subject}</p>
                 </div>
                 <div className="px-6 py-4 justify-center flex items-center">
-                  <a
-                    type="button"
-                    href="#"
+                  <Link
+                    to={item.path}
                     className="pointer-events-auto inline-block cursor-pointer rounded text-base tracking-wider font-semibold leading-normal text-alt1 transition duration-150 ease-in-out focus:outline-none focus:ring-0 active:text-primary-700 mr-2"
                   >
                     LIHAT DETAIL
-                  </a>
+                  </Link>
                   <GoArrowRight className="text-alt1" />
                 </div>
               </div>

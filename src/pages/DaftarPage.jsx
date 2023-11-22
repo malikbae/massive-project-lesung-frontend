@@ -3,9 +3,10 @@ import Footer from "../components/Footer";
 import DaftarGuru from "../components/DaftarGuru";
 
 function Daftar() {
+  const isUserLoggedIn = true;
   return (
     <>
-      <NavBar />
+      <NavBar is_login={isUserLoggedIn} />
       <DaftarGuru />
       <Footer />
     </>
