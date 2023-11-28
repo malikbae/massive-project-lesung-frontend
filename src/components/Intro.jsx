@@ -5,7 +5,7 @@ const Intro = () => {
     <div className="mx-auto w-full max-w-screen-xl flex flex-col lg:flex-row pt-12 pb-12">
       <div className="mx-auto w-full max-w-screen-xl">
         <div className="text-6xl font-semibold pb-5 leading-tight">
-          <h1>Selamat Datang di MaLes.</h1>
+          <h1>Selamat Datang di LesUng.</h1>
           <h1>Tempat Belajarnya Tanpa Ribet!</h1>
         </div>
         <div className="max-w-2xl text-lg leading-loose pb-12">

@@ -120,7 +120,7 @@ function HomePage() {
           <div className="flex flex-col justify-center text-center rounded-sm lg:p-16 lg:max-w-[50%] lg:text-left xl:pl-24 xl:py-16 2xl:pl-32 2xl:py-24">
             <div>
               <h3 className="text-lg/tight xl:text-xl/tight mb-1 font-semibold text-primary">
-                <span className="text-body">BIMBINGAN BELAJAR</span> MALES
+                <span className="text-body">BIMBINGAN BELAJAR</span> LESUNG
               </h3>
             </div>
             <div className="mt-4 sm:mt-6 xl:mt-8">

@@ -8,7 +8,7 @@ const Layanan1 = () => {
           <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-2xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
             <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="src/assets/Rectangle 66.png" alt="" />
             <div class="flex flex-col justify-between p-4 leading-normal">
-              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Bimbingan MaLes</h5>
+              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Bimbingan LesUng</h5>
               <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Bimbel tatap muka, belajar tanpa ribet tersedia sekarang sudah berada di sekitar Anda !</p>
             </div>
           </a>
@@ -25,7 +25,7 @@ const Layanan1 = () => {
           <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-2xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
             <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="src/assets/Rectangle 67.png" alt="" />
             <div class="flex flex-col justify-between p-4 leading-normal">
-              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Konsultasi MaLes</h5>
+              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Konsultasi LesUng</h5>
               <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Masih bingung cari guru bimbel yang pas untuk anak? Yuk konsultasikan dulu kebutuhan Anda!</p>
             </div>
           </a>
