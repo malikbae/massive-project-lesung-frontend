@@ -6,7 +6,7 @@ function HeadingText() {
       <div className="xl:col-span-3 lg:col-span-2 lg:mx-10 my-auto">
         <div>
           <h3 className="text-xl/tight mb-3 font-semibold text-heading">
-            <span className="text-background">BIMBINGAN BELAJAR</span> MALES
+            <span className="text-background">BIMBINGAN BELAJAR</span> LESUNG
           </h3>
         </div>
         <div className="mt-8">

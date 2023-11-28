@@ -7,6 +7,8 @@ import ForgotPassword from "./pages/ForgotPassword";
 import DaftarPage from "./pages/DaftarPage";
 import Profile from "./pages/ProfileSiswa";
 import DetailGuru from "./pages/DetailGuru";
+import RekrutGuru from "./pages/RekrutGuru";
+import KelasBerlangsungSiswa from "./pages/KelasBerlangsungSIswa";
 
 const App = () => {
   return (
@@ -20,6 +22,8 @@ const App = () => {
         <Route path="/daftar" Component={DaftarPage} />
         <Route path="/profile" Component={Profile} />
         <Route path="/detail-guru" Component={DetailGuru} />
+        <Route path="/rekrut-guru" Component={RekrutGuru} />
+        <Route path="/kelas-berlangsung" Component={KelasBerlangsungSiswa} />
       </Routes>
     </>
   );
