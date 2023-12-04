@@ -8,7 +8,7 @@ import Guru4 from "../assets/img/guru-4.jpg";
 import { MdVerified } from "react-icons/md";
 import { FaClipboardList, FaHourglassHalf, FaClipboardCheck } from "react-icons/fa";
 
-function KelasBerlangsungSiswa() {
+function NotifikasiSiswa() {
   const isUserLoggedIn = true;
   return (
     <>
@@ -180,4 +180,4 @@ function KelasBerlangsungSiswa() {
   );
 }
 
-export default KelasBerlangsungSiswa;
+export default NotifikasiSiswa;
