@@ -10,9 +10,11 @@ import { FaClipboardList, FaHourglassHalf, FaClipboardCheck } from "react-icons/
 
 function NotifikasiSiswa() {
   const isUserLoggedIn = true;
+  const userRoleLoggedIn = "siswa";
+
   return (
     <>
-      <NavBar is_login={isUserLoggedIn} />
+      <NavBar is_login={isUserLoggedIn} userRole={userRoleLoggedIn} />
 
       <section className="py-24 bg-background">
         <div className="container">

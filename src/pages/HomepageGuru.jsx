@@ -1,7 +1,6 @@
 import React from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
-import Murid1 from "../assets/img/murid-1.jpg";
 import Murid2 from "../assets/img/murid-2.jpg";
 import Murid3 from "../assets/img/murid-3.jpg";
 import Murid4 from "../assets/img/murid-4.jpg";
@@ -10,9 +9,10 @@ import { IoMdNotifications } from "react-icons/io";
 
 function HomepageGuru() {
   const isUserLoggedIn = true;
+  const userRoleLoggedIn = "guru";
   return (
     <>
-      <NavBar is_login={isUserLoggedIn} />
+      <NavBar is_login={isUserLoggedIn} userRole={userRoleLoggedIn} />
 
       <section className="py-24 bg-background">
         <div className="container">

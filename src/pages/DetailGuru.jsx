@@ -5,12 +5,15 @@ import { GoArrowRight } from "react-icons/go";
 import Guru1 from "../assets/img/guru-1.jpg";
 import Guru2 from "../assets/img/guru-2.jpg";
 import Guru3 from "../assets/img/guru-3.jpg";
+import { Link } from "react-router-dom";
 
 function DetailGuru() {
   const isUserLoggedIn = true;
+  const userRoleLoggedIn = "siswa";
+
   return (
     <>
-      <NavBar is_login={isUserLoggedIn} />
+      <NavBar is_login={isUserLoggedIn} userRole={userRoleLoggedIn} />
 
       <section className="py-24 bg-background">
         <div className="container">
@@ -45,7 +48,9 @@ function DetailGuru() {
                 tingkat sekolah dasar, saya memiliki kemampuan untuk menginspirasi dan membimbing para siswa dengan kesabaran dan kepedulian yang luar biasa.
               </p>
               <h3 className="text-base md:text-xl lg:text-2xl font-semibold text-background mt-2 lg:mt-4">Kuota Anak Didik: 2/5</h3>
-              <button className="mt-2 lg:mt-4 rounded-full text-base font-semibold px-8 py-2 bg-secondary hover:bg-opacity-80 duration-300 transition ease-in-out">REKRUT</button>
+              <Link to="/rekrut-guru">
+                <button className="mt-2 lg:mt-4 rounded-full text-base font-semibold px-8 py-2 bg-secondary hover:bg-opacity-80 duration-300 transition ease-in-out">REKRUT</button>
+              </Link>
             </div>
           </div>
         </div>
