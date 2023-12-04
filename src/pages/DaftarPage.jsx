@@ -4,9 +4,10 @@ import DaftarGuru from "../components/DaftarGuru";
 
 function Daftar() {
   const isUserLoggedIn = true;
+  const userRoleLoggedIn = "siswa";
   return (
     <>
-      <NavBar is_login={isUserLoggedIn} />
+      <NavBar is_login={isUserLoggedIn} userRole={userRoleLoggedIn} />
       <DaftarGuru />
       <Footer />
     </>

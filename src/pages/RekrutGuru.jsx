@@ -1,11 +1,14 @@
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
+import { Link } from "react-router-dom";
 
 function RekrutGuru() {
   const isUserLoggedIn = true;
+  const userRoleLoggedIn = "siswa";
+
   return (
     <>
-      <NavBar is_login={isUserLoggedIn} />
+      <NavBar is_login={isUserLoggedIn} userRole={userRoleLoggedIn} />
       <section className="py-24 bg-alt1">
         <div className="container">
           <div className="flex flex-wrap px-4 lg:px-24 xl:px-32">
@@ -74,7 +77,9 @@ function RekrutGuru() {
         <div className="container">
           <div className="flex flex-wrap px-4 lg:px-24 xl:px-32">
             <div className="w-full mb-4 lg:mb-0 flex justify-center">
-              <button className="mt-2 lg:mt-4 rounded-full text-base font-semibold px-8 py-2 bg-secondary hover:bg-opacity-80 duration-300 transition ease-in-out">KONFIRMASI</button>
+              <Link to="/notifikasi-siswa">
+                <button className="mt-2 lg:mt-4 rounded-full text-base font-semibold px-8 py-2 bg-secondary hover:bg-opacity-80 duration-300 transition ease-in-out">KONFIRMASI</button>
+              </Link>
             </div>
           </div>
         </div>

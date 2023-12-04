@@ -2,11 +2,14 @@ import React from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import { FiPlusCircle } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 function EditProfileSiswa() {
+  const isUserLoggedIn = true;
+  const userRoleLoggedIn = "siswa";
   return (
     <>
-      <NavBar />
+      <NavBar is_login={isUserLoggedIn} userRole={userRoleLoggedIn} />
 
       <section className="py-24">
         <div className="container">
@@ -62,7 +65,9 @@ function EditProfileSiswa() {
                   Sentuh!
                 </p>
                 <div className="flex justify-center mt-2 lg:mt-6">
-                  <button className="rounded-full text-base font-semibold px-8 py-2 bg-secondary hover:bg-opacity-80 duration-300 transition ease-in-out">DAFTAR</button>
+                  <Link to="/daftar">
+                    <button className="rounded-full text-base font-semibold px-8 py-2 bg-secondary hover:bg-opacity-80 duration-300 transition ease-in-out">DAFTAR</button>
+                  </Link>
                 </div>
               </div>
             </div>

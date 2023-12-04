@@ -6,11 +6,14 @@ import { BsTelephone } from "react-icons/bs";
 import Guru3 from "../assets/img/guru-3.jpg";
 import Guru4 from "../assets/img/guru-4.jpg";
 import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 function ProfileSiswaBaru() {
+  const isUserLoggedIn = true;
+  const userRoleLoggedIn = "siswa";
   return (
     <>
-      <NavBar />
+      <NavBar is_login={isUserLoggedIn} userRole={userRoleLoggedIn} />
 
       <section className="py-24">
         <div className="container">
@@ -23,7 +26,9 @@ function ProfileSiswaBaru() {
                   <img src="https://sm.askmen.com/t/askmen_in/article/f/facebook-p/facebook-profile-picture-affects-chances-of-gettin_fr3n.1200.jpg" alt="" className="h-full w-full object-cover" />
                 </div>
                 <h1 className="text-2xl lg:text-4xl font-semibold text-background mt-2 lg:mt-4">Sendy Prayoga</h1>
-                <button className="mt-2 lg:mt-4 rounded-full text-base font-semibold px-8 py-2 bg-secondary hover:bg-opacity-80 duration-300 transition ease-in-out">Edit Profile</button>
+                <Link to="/edit-profile-siswa">
+                  <button className="mt-2 lg:mt-4 rounded-full text-base font-semibold px-8 py-2 bg-secondary hover:bg-opacity-80 duration-300 transition ease-in-out">Edit Profile</button>
+                </Link>
               </div>
 
               <div className="w-full lg:w-1/2 self-center lg:self-start py-12">

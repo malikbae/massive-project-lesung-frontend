@@ -1,38 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import GoogleIcon from "../assets/img/google.png";
 import HeadingText from "../components/HeadingText";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function SignIn() {
-  const inputDetails = [
-    {
-      id: 1,
-      name: "Email atau Nomor Telepon",
-      type: "email",
-    },
-    {
-      id: 2,
-      name: "Kata Sandi",
-      type: "password",
-    },
-  ];
-  const buttonDetails = [
-    {
-      id: 1,
-      name: "Masuk",
-      border: "transparent",
-      fill: "secondary",
-      path: "/home",
-    },
-    {
-      id: 2,
-      name: "Lupa Kata Sandi?",
-      type: "password",
-      border: "primary",
-      fill: "transparent",
-      path: "/forgot-password",
-    },
-  ];
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    // Login Sementara
+    if (username === "user@gmail.com" && password === "user") {
+      setIsLoggedIn(true);
+      alert("Login berhasil!");
+      navigate("/home");
+    } else if (username === "guru@gmail.com" && password === "guru") {
+      setIsLoggedIn(true);
+      alert("Login berhasil!");
+      navigate("/home-guru");
+    } else {
+      alert("Login gagal. Silakan coba lagi.");
+    }
+  };
+
   return (
     <section className="h-screen flex items-center justify-center bg-primary">
       <div className="container flex 2xl:px-32 xl:px-24">
@@ -61,18 +52,32 @@ function SignIn() {
               <p className="text-sm text-heading">Atau</p>
             </div>
             <div className="space-y-5 mt-6">
-              {inputDetails.map((input) => (
-                <div key={input.id}>
-                  <input className="text-gray-500 border-primary focus:ring-0 focus:border-gray-400 text-sm rounded-[18px] p-4 w-full" type={input.type} id={input.type} name={input.type} placeholder={input.name} />
-                </div>
-              ))}
+              <input
+                className="text-gray-500 border-primary focus:ring-0 focus:border-gray-400 text-sm rounded-[18px] p-4 w-full"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email atau Nomor Telepon"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+              />
+              <input
+                className="text-gray-500 border-primary focus:ring-0 focus:border-gray-400 text-sm rounded-[18px] p-4 w-full"
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Kata Sandi"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
             </div>
             <div className="space-y-5 my-6">
-              {buttonDetails.map((button) => (
-                <Link key={button.id} className="flex flex-wrap items-center justify-between gap-6" to={button.path}>
-                  <button className={`bg-${button.fill} border border-${button.border} text-heading font-medium text-sm rounded-[50px] p-4 w-full`}>{button.name}</button>
-                </Link>
-              ))}
+              <button className="bg-secondary border border-transparent text-heading font-medium text-sm rounded-[50px] p-4 w-full" onClick={handleLogin}>
+                Masuk
+              </button>
+              <Link className="flex flex-wrap items-center justify-between gap-6" to="/forgot-password">
+                <button className={`bg-transparent border border-primary text-heading font-medium text-sm rounded-[50px] p-4 w-full`}>Lupa Kata Sandi?</button>
+              </Link>
             </div>
           </div>
         </div>
