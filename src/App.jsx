@@ -9,7 +9,7 @@ import Profile from "./pages/ProfileSiswa";
 import DetailGuru from "./pages/DetailGuru";
 import RekrutGuru from "./pages/RekrutGuru";
 import NotifikasiSiswa from "./pages/NotifikasiSiswa";
-import ProfileSiswaBaru from "./pages/ProfileSIswaBaru";
+import ProfileSiswaBaru from "./pages/ProfileSiswaBaru";
 import EditProfileSiswa from "./pages/EditProfileSiswa";
 import HomepageGuru from "./pages/HomepageGuru";
 
