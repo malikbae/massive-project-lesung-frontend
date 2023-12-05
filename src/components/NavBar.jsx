@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaRegUser } from "react-icons/fa";
+import Logo from "../assets/img/logo.png";
 
 const NavBar = ({ is_login, userRole }) => {
   const renderUserIcon = () => {
@@ -13,7 +14,7 @@ const NavBar = ({ is_login, userRole }) => {
         );
       } else if (userRole === "guru") {
         return (
-          <Link to="/edit-profile-siswa">
+          <Link to="/home-guru">
             <FaRegUser className="text-heading text-2xl" />
           </Link>
         );
@@ -37,8 +38,7 @@ const NavBar = ({ is_login, userRole }) => {
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <Link to="/home">
             <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
-              <img src="https://flowbite.com/docs/images/logo.svg" className="h-8" alt="Flowbite Logo" />
-              <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">LesUng</span>
+              <img src={Logo} alt="" className="w-11" />
             </a>
           </Link>
 
