@@ -9,6 +9,11 @@ import Profile from "./pages/ProfileSiswa";
 import DetailGuru from "./pages/DetailGuru";
 import RekrutGuru from "./pages/RekrutGuru";
 import KelasBerlangsungSiswa from "./pages/KelasBerlangsungSIswa";
+import KelasBerlangsungGuru from "./pages/KelasBerlangsungGuru";
+import KelasBerlangsungKonfirmasiOrtu from "./pages/KelasBerlangsungKonfirmasiOrtu";
+import EditProfileGuru from "./pages/EditProfileGuru";
+import EditProfileGuru2 from "./pages/EditProfileGuru2";
+import PengaturanMengajar from "./pages/PengaturanMengajar";
 
 const App = () => {
   return (
@@ -24,6 +29,17 @@ const App = () => {
         <Route path="/detail-guru" Component={DetailGuru} />
         <Route path="/rekrut-guru" Component={RekrutGuru} />
         <Route path="/kelas-berlangsung" Component={KelasBerlangsungSiswa} />
+        <Route
+          path="/kelas-berlangsung-guru"
+          Component={KelasBerlangsungGuru}
+        />
+        <Route
+          path="/kelas-berlangsung-konfirmasi-ortu"
+          Component={KelasBerlangsungKonfirmasiOrtu}
+        />
+        <Route path="/edit-profile-guru" Component={EditProfileGuru} />
+        <Route path="/edit-profile-guru/edit" Component={EditProfileGuru2} />
+        <Route path="/pengaturan-mengajar" Component={PengaturanMengajar} />
       </Routes>
     </>
   );
