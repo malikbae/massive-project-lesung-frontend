@@ -1,4 +1,5 @@
 import React from "react";
+import Logo from "../assets/img/logo.png";
 
 const Footer = () => {
   return (
@@ -7,7 +8,7 @@ const Footer = () => {
         <div class="mx-auto w-full max-w-screen-xl">
           <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
             <div>
-              <h2 class="mb-6 text-4xl font-bold text-gray-200 dark:text-white">MaLes</h2>
+              <h2 class="mb-6 text-4xl font-bold text-gray-200 dark:text-white">LesUng</h2>
               <ul class="text-gray-200 font-small text-sm">
                 <li class="mb-4 mr-4">
                   <a href="#" class="">
@@ -103,7 +104,7 @@ const Footer = () => {
           </div>
           <div class="px-4 py-6 bg-slate-600 dark:bg-gray-700 md:flex md:items-center md:justify-between">
             <span class="text-sm text-gray-200 dark:text-gray-300 sm:text-center">
-              © 2023 <a href="#">MaLes™</a>. All Rights Reserved.
+              © 2023 <a href="#">LesUng™</a>. All Rights Reserved.
             </span>
             <div class="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
               <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">

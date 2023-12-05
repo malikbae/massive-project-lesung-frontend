@@ -1,32 +1,50 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaRegUser } from "react-icons/fa";
+import Logo from "../assets/img/logo.png";
 
-const NavBar = ({ is_login }) => {
+const NavBar = ({ is_login, userRole }) => {
+  const renderUserIcon = () => {
+    if (is_login) {
+      if (userRole === "siswa") {
+        return (
+          <Link to="/profile-siswa">
+            <FaRegUser className="text-heading text-2xl" />
+          </Link>
+        );
+      } else if (userRole === "guru") {
+        return (
+          <Link to="/home-guru">
+            <FaRegUser className="text-heading text-2xl" />
+          </Link>
+        );
+      }
+    }
+    return (
+      <Link to="/sign-in">
+        <button
+          type="button"
+          className="text-white bg-primary hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
+          Login
+        </button>
+      </Link>
+    );
+  };
+
   return (
     <div>
       <nav className="bg-white border-gray-200 dark:bg-gray-900 shadow-lg">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <Link to="/home">
             <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
-              <img src="https://flowbite.com/docs/images/logo.svg" className="h-8" alt="Flowbite Logo" />
-              <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">LesUng</span>
+              <img src={Logo} alt="" className="w-11" />
             </a>
           </Link>
 
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-            {is_login ? (
-              <FaRegUser className="text-heading text-2xl" />
-            ) : (
-              <Link to="/sign-in">
-                <button
-                  type="button"
-                  className="text-white bg-primary hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                >
-                  Login
-                </button>
-              </Link>
-            )}
+            {renderUserIcon()}
+
             <button
               data-collapse-toggle="navbar-sticky"
               type="button"

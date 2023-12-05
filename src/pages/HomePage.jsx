@@ -19,6 +19,7 @@ import { Link } from "react-router-dom";
 
 function HomePage() {
   const isUserLoggedIn = true;
+  const userRoleLoggedIn = "siswa";
 
   const dataGuru = [
     {
@@ -114,7 +115,7 @@ function HomePage() {
   ];
   return (
     <>
-      <NavBar is_login={isUserLoggedIn} />
+      <NavBar is_login={isUserLoggedIn} userRole={userRoleLoggedIn} />
       <section className="bg-alt1 text-heading">
         <div className="container flex flex-col justify-center p-12 lg:p-0 mx-auto lg:flex-row lg:justify-between">
           <div className="flex flex-col justify-center text-center rounded-sm lg:p-16 lg:max-w-[50%] lg:text-left xl:pl-24 xl:py-16 2xl:pl-32 2xl:py-24">
@@ -225,7 +226,9 @@ function HomePage() {
             {/* End Card */}
 
             <div className="flex flex-wrap items-center justify-between gap-6 mt-4 sm:mt-6 xl:mt-8">
-              <button className="bg-secondary text-heading text-xs lg:text-sm font-semibold rounded-[30px] p-4">DAFTAR SEKARANG</button>
+              <Link to="/sign-up">
+                <button className="bg-secondary text-heading text-xs lg:text-sm font-semibold rounded-[30px] p-4">DAFTAR SEKARANG</button>
+              </Link>
             </div>
           </div>
           <div className="flex items-center justify-center mt-8 lg:mt-0 w-[40%] lg:py-16 lg:max-w-[45%] lg:text-left xl:pr-24 xl:py-16 2xl:pr-32 2xl:py-24">

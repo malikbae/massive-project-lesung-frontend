@@ -8,11 +8,13 @@ import Guru4 from "../assets/img/guru-4.jpg";
 import { MdVerified } from "react-icons/md";
 import { FaClipboardList, FaHourglassHalf, FaClipboardCheck } from "react-icons/fa";
 
-function KelasBerlangsungSiswa() {
+function NotifikasiSiswa() {
   const isUserLoggedIn = true;
+  const userRoleLoggedIn = "siswa";
+
   return (
     <>
-      <NavBar is_login={isUserLoggedIn} />
+      <NavBar is_login={isUserLoggedIn} userRole={userRoleLoggedIn} />
 
       <section className="py-24 bg-background">
         <div className="container">
@@ -180,4 +182,4 @@ function KelasBerlangsungSiswa() {
   );
 }
 
-export default KelasBerlangsungSiswa;
+export default NotifikasiSiswa;
