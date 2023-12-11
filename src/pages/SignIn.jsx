@@ -2,25 +2,53 @@ import React, { useState } from "react";
 import GoogleIcon from "../assets/img/google.png";
 import HeadingText from "../components/HeadingText";
 import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function SignIn() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    emailOrPhoneNumber: "",
+    password: "",
+  });
 
-  const handleLogin = () => {
-    // Login Sementara
-    if (username === "user@gmail.com" && password === "user") {
-      setIsLoggedIn(true);
-      alert("Login berhasil!");
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.post("http://localhost:5000/api/v1/login", formData);
+      console.log("Login successful!", response.data);
+      toast.success("Login Berhasil!", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       navigate("/home");
-    } else if (username === "guru@gmail.com" && password === "guru") {
-      setIsLoggedIn(true);
-      alert("Login berhasil!");
-      navigate("/home-guru");
-    } else {
-      alert("Login gagal. Silakan coba lagi.");
+    } catch (error) {
+      console.error("Login failed!", error.response ? error.response.data : error.message);
+      toast.error(error.response ? error.response.data : error.message, {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
     }
   };
 
@@ -51,34 +79,39 @@ function SignIn() {
             <div className="flex flex-wrap items-center justify-center gap-6 mt-6">
               <p className="text-sm text-heading">Atau</p>
             </div>
-            <div className="space-y-5 mt-6">
-              <input
-                className="text-gray-500 border-primary focus:ring-0 focus:border-gray-400 text-sm rounded-[18px] p-4 w-full"
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Email atau Nomor Telepon"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-              />
-              <input
-                className="text-gray-500 border-primary focus:ring-0 focus:border-gray-400 text-sm rounded-[18px] p-4 w-full"
-                type="password"
-                id="password"
-                name="password"
-                placeholder="Kata Sandi"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-            </div>
-            <div className="space-y-5 my-6">
-              <button className="bg-secondary border border-transparent text-heading font-medium text-sm rounded-[50px] p-4 w-full" onClick={handleLogin}>
-                Masuk
-              </button>
-              <Link className="flex flex-wrap items-center justify-between gap-6" to="/forgot-password">
-                <button className={`bg-transparent border border-primary text-heading font-medium text-sm rounded-[50px] p-4 w-full`}>Lupa Kata Sandi?</button>
-              </Link>
-            </div>
+            <form onSubmit={handleSubmit}>
+              <div className="space-y-5 mt-6">
+                <input
+                  className="text-gray-500 border-primary focus:ring-0 focus:border-gray-400 text-sm rounded-[18px] p-4 w-full"
+                  type="text"
+                  id="emailOrPhoneNumber"
+                  name="emailOrPhoneNumber"
+                  placeholder="Email atau Nomor Telepon"
+                  value={formData.emailOrPhoneNumber}
+                  onChange={handleChange}
+                  required
+                />
+                <input
+                  className="text-gray-500 border-primary focus:ring-0 focus:border-gray-400 text-sm rounded-[18px] p-4 w-full"
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Kata Sandi"
+                  value={formData.password}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div className="space-y-5 my-6">
+                <button className="bg-secondary border border-transparent text-heading font-medium text-sm rounded-[50px] p-4 w-full" type="submit">
+                  Masuk
+                </button>
+                <ToastContainer />
+                <Link className="flex flex-wrap items-center justify-between gap-6" to="/forgot-password">
+                  <button className={`bg-transparent border border-primary text-heading font-medium text-sm rounded-[50px] p-4 w-full`}>Lupa Kata Sandi?</button>
+                </Link>
+              </div>
+            </form>
           </div>
         </div>
         <HeadingText />

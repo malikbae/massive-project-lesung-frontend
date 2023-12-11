@@ -4,9 +4,11 @@ import FormGuru from "../components/FormGuru";
 
 function EditProfileGuru() {
   const isUserLoggedIn = true;
+  const userRoleLoggedIn = "guru";
+
   return (
     <>
-      <NavBar is_login={isUserLoggedIn} />
+      <NavBar is_login={isUserLoggedIn} userRole={userRoleLoggedIn} />
       <FormGuru />
       <Footer />
     </>
