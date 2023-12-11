@@ -4,9 +4,11 @@ import EditGuru from "../components/EditGuru";
 
 function EditProfileGuru() {
   const isUserLoggedIn = true;
+  const userRoleLoggedIn = "guru";
+
   return (
     <>
-      <NavBar is_login={isUserLoggedIn} />
+      <NavBar is_login={isUserLoggedIn} userRole={userRoleLoggedIn} />
       <EditGuru />
       <Footer />
     </>

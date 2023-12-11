@@ -5,9 +5,11 @@ import LaporanGuru from "../components/LaporanGuru";
 
 function KelasBerlangsungGuru() {
   const isUserLoggedIn = true;
+  const userRoleLoggedIn = "guru";
+
   return (
     <>
-      <NavBar is_login={isUserLoggedIn} />
+      <NavBar is_login={isUserLoggedIn} userRole={userRoleLoggedIn} />
       <ProfileGuru />
       <LaporanGuru />
       <Footer />
