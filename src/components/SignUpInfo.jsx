@@ -1,18 +1,6 @@
 import GoogleIcon from "../assets/img/google.png";
 
-function SignUpInfo() {
-  const inputDetails = [
-    {
-      id: 1,
-      name: "Email atau Nomor Telepon",
-      type: "email",
-    },
-    {
-      id: 2,
-      name: "Kata Sandi",
-      type: "password",
-    },
-  ];
+function SignUpInfo({ formData, setFormData }) {
   return (
     <>
       <div className="flex flex-wrap items-center justify-between gap-6 mt-6">
@@ -27,11 +15,24 @@ function SignUpInfo() {
         <p className="text-sm text-heading">Atau</p>
       </div>
       <div className="space-y-5 mt-6">
-        {inputDetails.map((input) => (
-          <div key={input.id}>
-            <input className="text-gray-500 border-primary focus:ring-0 focus:border-gray-400 text-sm rounded-[18px] p-4 w-full" type={input.type} id={input.type} name={input.type} placeholder={input.name} />
-          </div>
-        ))}
+        <input
+          className="text-gray-500 border-primary focus:ring-0 focus:border-gray-400 text-sm rounded-[18px] p-4 w-full"
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Email"
+          value={formData.email}
+          onChange={(event) => setFormData({ ...formData, email: event.target.value })}
+        />
+        <input
+          className="text-gray-500 border-primary focus:ring-0 focus:border-gray-400 text-sm rounded-[18px] p-4 w-full"
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Kata Sandi"
+          value={formData.password}
+          onChange={(event) => setFormData({ ...formData, password: event.target.value })}
+        />
       </div>
     </>
   );

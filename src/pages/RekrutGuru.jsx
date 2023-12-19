@@ -36,8 +36,8 @@ function RekrutGuru() {
               <h1 className="text-2xl lg:text-4xl font-bold text-heading text-center">TENTANG ANDA</h1>
             </div>
             <div className="w-full lg:w-1/2 self-center">
-              <h3 className="text-base md:text-xl lg:text-2xl font-semibold text-heading">Budi</h3>
-              <h3 className="text-base md:text-xl lg:text-2xl font-semibold text-heading mt-2 lg:mt-4">Siswa - 4 SD</h3>
+              <h3 className="text-base md:text-xl lg:text-2xl font-semibold text-heading">Sendy Prayoga</h3>
+              {/* <h3 className="text-base md:text-xl lg:text-2xl font-semibold text-heading mt-2 lg:mt-4">Siswa - 4 SD</h3> */}
               <p className="mt-2 lg:mt-4 text-base text-heading font-normal">Graha Satria, Jalan RS. Fatmawati Raya.5 2 9 2, RT.2/RW.9, Cilandak Bar., Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 40132</p>
               <p className="mt-2 lg:mt-4 text-base text-heading font-normal">0813-1113-33444</p>
             </div>
