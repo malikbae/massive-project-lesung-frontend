@@ -6,6 +6,7 @@ import Murid3 from "../assets/img/murid-3.jpg";
 import Murid4 from "../assets/img/murid-4.jpg";
 import Murid5 from "../assets/img/murid-5.jpg";
 import { IoMdNotifications } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 function HomepageGuru() {
   const isUserLoggedIn = true;
@@ -20,25 +21,27 @@ function HomepageGuru() {
             <h1 className="text-2xl lg:text-4xl font-bold text-heading">Kelas Berlangsung</h1>
           </div>
           <div className="flex flex-wrap px-4 lg:px-24 xl:px-32">
-            <div className="w-full lg:w-1/2 self-center lg:self-start mb-2">
-              <div className="mt-2 lg:mr-4 gap-10 bg-primary shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]">
-                <div className="flex">
-                  <div className="p-6 w-[30%] self-center">
-                    <div className="h-20 w-20 lg:h-28 lg:w-28 xl:h-32 xl:w-32 rounded-full overflow-hidden">
-                      <img src="https://sm.askmen.com/t/askmen_in/article/f/facebook-p/facebook-profile-picture-affects-chances-of-gettin_fr3n.1200.jpg" alt="" className="h-full w-full object-cover" />
+              <div className="w-full lg:w-1/2 self-center lg:self-start mb-2">
+            <Link to="/kelas-berlangsung-guru">
+                <div className="mt-2 lg:mr-4 gap-10 bg-primary shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]">
+                  <div className="flex">
+                    <div className="p-6 w-[30%] self-center">
+                      <div className="h-20 w-20 lg:h-28 lg:w-28 xl:h-32 xl:w-32 rounded-full overflow-hidden">
+                        <img src="https://sm.askmen.com/t/askmen_in/article/f/facebook-p/facebook-profile-picture-affects-chances-of-gettin_fr3n.1200.jpg" alt="" className="h-full w-full object-cover" />
+                      </div>
+                    </div>
+                    <div className="p-6 w-[70%]">
+                      <h3 className="text-base md:text-lg lg:text-xl font-semibold text-background">Sendy Prayoga</h3>
+                      <p className="text-base text-background font-normal truncate overflow-hidden mt-2 lg:mt-4">
+                        Graha Satria, Jalan RS. Fatmawati Raya.5 2 9 2, RT.2/RW.9, Cilandak Bar., Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 40132
+                      </p>
+                      <p className="text-base text-background font-normal mt-2 lg:mt-4">Progress : 1/8</p>
+                      <p className="text-base text-background font-normal mt-2 lg:mt-4">Due Time : November 29, 2023</p>
                     </div>
                   </div>
-                  <div className="p-6 w-[70%]">
-                    <h3 className="text-base md:text-lg lg:text-xl font-semibold text-background">Sendy Prayoga</h3>
-                    <p className="text-base text-background font-normal truncate overflow-hidden mt-2 lg:mt-4">
-                      Graha Satria, Jalan RS. Fatmawati Raya.5 2 9 2, RT.2/RW.9, Cilandak Bar., Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 40132
-                    </p>
-                    <p className="text-base text-background font-normal mt-2 lg:mt-4">Progress : 1/8</p>
-                    <p className="text-base text-background font-normal mt-2 lg:mt-4">Due Time : November 29, 2023</p>
-                  </div>
                 </div>
+            </Link>
               </div>
-            </div>
 
             <div className="w-full lg:w-1/2 self-center lg:self-start mb-2">
               <div className="mt-2 lg:mr-4 gap-10 bg-primary shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]">

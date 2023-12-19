@@ -24,19 +24,38 @@ function SignIn() {
     e.preventDefault();
 
     try {
+      let user;
       const response = await axios.post("http://localhost:5000/api/v1/login", formData);
-      console.log("Login successful!", response.data);
-      toast.success("Login Berhasil!", {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
-      navigate("/home");
+      user = response.data.user;
+      if (user.role === "siswa") {
+        toast.success("Login Berhasil!", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+        setTimeout(() => {
+          navigate("/home");
+        }, 2000);
+      } else if (user.role === "guru") {
+        toast.success("Login Berhasil!", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+        setTimeout(() => {
+          navigate("/home-guru");
+        }, 2000);
+      }
     } catch (error) {
       console.error("Login failed!", error.response ? error.response.data : error.message);
       toast.error(error.response ? error.response.data : error.message, {

@@ -24,14 +24,10 @@ const LaporanKonfirmasiOrtu = () => {
                     <div className="flex flex-row">
                       <div class="flex-1 min-w-0 ms-4">
                         <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
-                          Laporan Sesi 3
+                          Laporan Sesi 1
                         </p>
                         <p class="text-sm text-gray-500 dark:text-gray-400">
-                          Lorem ipsum dolor sit amet consectetur. Eros faucibus
-                          elit imperdiet adipiscing pellentesque. Nibh ut nibh
-                          nunc pellentesque sagittis dictum duis dolor arcu. Dui
-                          enim vitae auctor vitae egestas et. Consectetur massa
-                          volutpat nulla et enim ligula lacus.
+                        Pembelajaran hari ini, yaitu membahas tentang pentingnya memahami rukun iman dan rukun islam sebagai seorang muslim. Saya memberikan tugas untuk menghapalkan rukun iman dan rukun islam.
                         </p>
                       </div>
                       <div class="inline-flex flex-col items-end text-base font-semibold dark:text-white ml-4">
@@ -45,7 +41,7 @@ const LaporanKonfirmasiOrtu = () => {
               </ul>
             </div>
           </div>
-          <div class="w-full bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700 mb-4">
+          {/* <div class="w-full bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700 mb-4">
             <div class="flow-root">
               <ul>
                 <li class="py-3 sm:py-4">
@@ -92,7 +88,7 @@ const LaporanKonfirmasiOrtu = () => {
                 </li>
               </ul>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="flex w-[228px] max-w-full items-stretch gap-3.5 mr-14 mt-14 self-end max-md:mr-2.5 max-md:mt-10 mb-5">
           <svg
