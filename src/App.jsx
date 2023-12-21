@@ -17,6 +17,10 @@ import NotifikasiSiswa from "./pages/NotifikasiSiswa";
 import ProfileSiswaBaru from "./pages/ProfileSiswaBaru";
 import EditProfileSiswa from "./pages/EditProfileSiswa";
 import HomepageGuru from "./pages/HomepageGuru";
+import Dashboard from "./pages/Dashboard";
+import User from "./components/User";
+import Guru from "./components/Guru";
+import KelasBerlangsung from "./components/KelasBerlangsung";
 
 const App = () => {
   return (
@@ -31,14 +35,8 @@ const App = () => {
         <Route path="/profile" Component={Profile} />
         <Route path="/detail-guru" Component={DetailGuru} />
         <Route path="/rekrut-guru" Component={RekrutGuru} />
-        <Route
-          path="/kelas-berlangsung-guru"
-          Component={KelasBerlangsungGuru}
-        />
-        <Route
-          path="/kelas-berlangsung-konfirmasi-ortu"
-          Component={KelasBerlangsungKonfirmasiOrtu}
-        />
+        <Route path="/kelas-berlangsung-guru" Component={KelasBerlangsungGuru} />
+        <Route path="/kelas-berlangsung-konfirmasi-ortu" Component={KelasBerlangsungKonfirmasiOrtu} />
         <Route path="/edit-profile-guru" Component={EditProfileGuru} />
         <Route path="/edit-profile-guru/edit" Component={EditProfileGuru2} />
         <Route path="/pengaturan-mengajar" Component={PengaturanMengajar} />
@@ -46,6 +44,10 @@ const App = () => {
         <Route path="/profile-siswa" Component={ProfileSiswaBaru} />
         <Route path="/edit-profile-siswa" Component={EditProfileSiswa} />
         <Route path="/home-guru" Component={HomepageGuru} />
+        <Route path="/dashboard" Component={Dashboard} />
+        <Route path="/user" Component={User} />
+        <Route path="/guru" Component={Guru} />
+        <Route path="/kelas-berlangsung" Component={KelasBerlangsung} />
       </Routes>
     </>
   );
